@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- 3367650000000 - d.getTime();  我想要消 -->
+<head>
+    <meta charset="unicode" />
+    <title>Startpage</title>
+    <meta name="author" content="ArcaiC">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+
+<script type="text/javascript">
+  function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct()',refresh)
+  }
+
+  function display_ct() {
+    var d = new Date();
+    var t = 3367650000000 - d.getTime();
+    t = Math.floor(t / 1000);
+    document.getElementById("counter").innerHTML = t;
+    display_c();
+  }
+
+  function ddg_search() {
+    var final = "https://duckduckgo.com/?q=";
+    var search = document.getElementById("search").value;
+    var arr = search.split(" ");
+    for (var i = 0; i < arr.length - 1; i++) {
+      final = final + arr[i] + "+"
+    }
+    final = final + arr[arr.length - 1];
+    window.location.href = final;
+  }
+
+</script>
+
+
+<body onload="display_ct();">
+  <div class="title">
+    <center>
+      <a id="title"> 我想要消 </a><br>
+      <a id="subtitle">"I want to disappear"</a>
+    </center>
+  </div>
+  <br><br><br><br>
+  <div class="TTL">
+    <center>
+      <a id="ttl">TTL = </a>
+      <a id="counter"></a>
+    </center>
+  </div>
+  <br><br><br><br>
+  <div class="Searchbar">
+    <center>
+      <form>
+        <input id="search" class="search_bar" type="text" placeholder="" >
+        <button id="search_btn" type="button" name="button" onclick="ddg_search();">
+        <script>
+        var input = document.getElementById("search");
+
+        // Execute a function when the user releases a key on the keyboard
+        input.addEventListener("keydown", function(event) {
+          // Number 13 is the "Enter" key on the keyboard
+          if (event.keyCode == 13) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            ddg_search();
+          }
+        });
+        </script>
+          <img src="./Assets/search.png" alt="Search" height="56px" width="56px">
+        </button>
+      </form>
+    </center>
+  </div>
+
+  <br><br><br><br>
+
+  <div class="div_button">
+    <div class="row">
+      <div class="flip-box">
+
+        <!-- MEDIA -->
+        <div class="column" id="Media">
+          <div class="flip-box-front">
+              <img src="./Assets/Media.png" alt="" width="256px" height="256px">
+              <div class="frontext" style="left:75px; bottom: 10px">Media</div>
+          </div>
+
+          <div class="flip-box-back">
+            <div class="container" >
+              <a href="https://www.youtube.com"><img src="./Assets/youtube.png" alt="youtube" height="64" width="64" style="margin-left:2%; float: left; "></a>
+
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.youtube.com">Youtube</a>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Twitch.png" alt="youtube" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.twitch.tv">Twitch</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Spotify.png" alt="youtube" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://open.spotify.com">Spotify</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Kissanime.png" alt="youtube" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.kissanime.ru">"Crunchyroll"</a><br>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-box">
+
+        <!-- SOCIAL -->
+        <div class="column" id="Social">
+          <div class="flip-box-front">
+            <img src="./Assets/Social.png" alt="" width="256px" height="256px">
+            <div class="frontext" style="left:75px; bottom: 10px">Social</div>
+          </div>
+
+          <div class="flip-box-back">
+            <div class="container">
+              <img src="./Assets/facebook.png" alt="facebook" height="64" width="64" style="margin-left:2%; float: left;">
+
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.facebook.com">Facebook</a>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Reddiot.png" alt="Reddit" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.reddit.com">Reddit</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Twitter.png" alt="Twitter" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.twitter.com">Twitter</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Instagram.png" alt="Instagram" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.instagram.com">Instagram</a><br>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="flip-box">
+
+        <!-- UP -->
+        <div class="column" id="UP">
+          <div class="flip-box-front">
+            <center>
+              <img src="./Assets/College.png" alt="" width="256px" height="256px">
+              <div class="frontext" style="left:60px; bottom: 10px">College</div>
+            </center>
+          </div>
+
+          <div class="flip-box-back">
+            <div class="container">
+              <img src="./Assets/UP.png" alt="Sigarra" height="64" width="64" style="margin-left:2%; float: left;">
+
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://sigarra.up.pt/fcup/pt/web_page.Inicial">Sigarra</a>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/UP.png" alt="Webmail" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://webmail.fc.up.pt/">Webmail</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Moodle.png" alt="Moodle" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://moodle.up.pt/my/">Moodle</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/Github.png" alt="Github" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="https://www.github.com">Github</a><br>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-box">
+
+        <!-- 4chan -->
+        <div class="column" id="4chan">
+          <div class="flip-box-front">
+            <img src="./Assets/4chanMain.png" alt="" width="256px" height="256px">
+            <div class="frontext" style="left:75px; bottom: 10px">4chan</div>
+          </div>
+
+          <div class="flip-box-back">
+            <div class="container">
+              <img src="./Assets/4chan.png" alt="Sigarra" height="64" width="64" style="margin-left:2%; float: left;">
+
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="http://boards.4channel.org/sp/">Sports</a>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/4chan.png" alt="Webmail" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="http://boards.4channel.org/a/">Anime</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/4chan.png" alt="Moodle" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="http://boards.4channel.org/vg/">Vidya</a><br>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="./Assets/4chan.png" alt="Github" height="64" width="64" style="margin-left:2%; float: left;">
+              <div class="container_text">
+                <a style="text-decoration: none; color: #EEEEEE" href="http://boards.4channel.org/vp/">Pokemon</a><br>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
